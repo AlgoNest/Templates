@@ -1,211 +1,223 @@
+<!-- Modern Barbershop Website (All Sections Included) -->
+<!-- Full HTML Code Below -->
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern Barbershop</title>
 
-    <title>Gentlemen's Barber Shop</title>
-
-    <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/templatemo-barber-shop.css" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background:#0d0d0d;
+            color:white;
+        }
+        .sidebar{
+            background:#111;
+            height:100vh;
+            border-right:1px solid #222;
+        }
+        .sidebar a{
+            color:#aaa;
+            font-weight:500;
+            font-size:18px;
+        }
+        .sidebar a:hover{
+            color:white;
+        }
+        .hero{
+            height:100vh;
+            background:url('images/vintage-chair-barbershop.jpg');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            align-items:center;
+            padding-left:60px;
+        }
+        .hero h1{
+            font-size:70px;
+            font-weight:700;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- TOP NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/templatemo-barber-logo.png" class="img-fluid" style="height:40px;">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_1">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">Our Story</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_3">Services</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Price List</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                    </li>
-
+    <!-- Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 sidebar p-4 position-fixed">
+                <h2 class="text-white mb-4">BARBERSHOP</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item mb-3"><a href="#about" class="nav-link">Our Story</a></li>
+                    <li class="nav-item mb-3"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item mb-3"><a href="#pricing" class="nav-link">Price List</a></li>
+                    <li class="nav-item mb-3"><a href="#booking" class="nav-link">Booking</a></li>
+                    <li class="nav-item mb-3"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-            </div>
-        </div>
-    </nav>
+            </nav>
 
-    <!-- MAIN CONTENT (shifted down because navbar is fixed) -->
-    <div style="margin-top: 80px;"></div>
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10 ms-auto p-0">
 
-    <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-8 col-12">
-                    <h1 class="text-white mb-lg-3 mb-4"><strong>Barber <em>Shop</em></strong></h1>
-                    <p class="text-black">Get the most professional haircut for you</p>
-                    <br>
-                    <a class="btn custom-btn custom-border-btn custom-btn-bg-white smoothscroll me-2 mb-2" href="#section_2">About Us</a>
-                    <a class="btn custom-btn smoothscroll mb-2" href="#section_3">What we do</a>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="custom-block d-lg-flex flex-column justify-content-center align-items-center">
-            <img src="images/vintage-chair-barbershop.jpg" class="custom-block-image img-fluid" alt="">
-            <h4><strong class="text-white">Hurry Up! Get good haircut.</strong></h4>
-            <a href="#booking-section" class="smoothscroll btn custom-btn custom-btn-italic mt-3">Book a seat</a>
-        </div>
-    </section>
-
-
-    <!-- ABOUT -->
-    <section class="about-section section-padding" id="section_2">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12 mx-auto">
-                    <h2 class="mb-4">Best hairdressers</h2>
-
-                    <div class="border-bottom pb-3 mb-5">
-                        <p>Gentlemen's Barber Shop is new Bootstrap v5 HTML CSS template by TemplateMo...</p>
+                <!-- HERO -->
+                <section id="home" class="hero text-white">
+                    <div>
+                        <h1>Modern <span class="text-danger">Barber</span> Studio</h1>
+                        <p class="lead">Premium Cuts • Styling • Grooming</p>
+                        <a href="#booking" class="btn btn-danger btn-lg mt-3">Book Now</a>
                     </div>
-                </div>
+                </section>
 
-                <h6 class="mb-5">Meet Barbers</h6>
+                <!-- ABOUT -->
+                <section id="about" class="p-5">
+                    <div class="container">
+                        <h2 class="mb-4">Our Story</h2>
+                        <p class="lead">We are a premium barbershop that blends modern luxury with classic craftsmanship.</p>
 
-                <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
-                    <img src="images/barbar/portrait-male-hairdresser-with-scissors.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
-                    <div class="team-info d-flex align-items-center flex-wrap">
-                        <p class="mb-0">Redo</p>
-                        <ul class="social-icon ms-auto">
-                            <li class="social-icon-item"><a href="#" class="social-icon-link bi-facebook"></a></li>
-                            <li class="social-icon-item"><a href="#" class="social-icon-link bi-instagram"></a></li>
-                            <li class="social-icon-item"><a href="#" class="social-icon-link bi-whatsapp"></a></li>
-                        </ul>
-                    </div>
-                </div>
+                        <div class="row mt-5">
+                            <div class="col-lg-6">
+                                <img src="images/barbar/portrait-male-hairdresser-with-scissors.jpg" class="img-fluid rounded shadow" />
+                            </div>
+                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                <h4 class="mt-3 mt-lg-0">Meet Redo</h4>
+                                <p>Master barber with 10+ years of experience in modern styling.</p>
 
-                <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap mt-4 mt-lg-0 mb-5 mb-lg-0">
-                    <img src="images/barbar/portrait-mid-adult-bearded-male-barber-with-folded-arms.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
-                    <div class="team-info d-flex align-items-center flex-wrap">
-                        <p class="mb-0">Sam</p>
-                        <ul class="social-icon ms-auto">
-                            <li class="social-icon-item"><a href="#" class="social-icon-link bi-facebook"></a></li>
-                            <li class="social-icon-item"><a href="#" class="social-icon-link bi-instagram"></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- DISCOUNT SECTION -->
-    <section class="featured-section section-padding">
-        <div class="section-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-12 mx-auto text-center">
-                    <h2 class="mb-3">Get 32% Discount</h2>
-                    <p>on every second week of the month</p>
-                    <strong>Promo Code: BarBerMo</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SERVICES -->
-    <section class="services-section section-padding" id="section_3">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12">
-                    <h2 class="mb-5">Services</h2>
-                </div>
-
-                <!-- 4 service items... (same as your original) -->
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- BOOKING FORM -->
-    <section class="booking-section section-padding" id="booking-section">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-10 col-12 mx-auto">
-                    <form action="#" method="post" class="custom-form booking-form" id="bb-booking-form">
-
-                        <div class="text-center mb-5">
-                            <h2 class="mb-1">Book a seat</h2>
-                            <p>Please fill out the form and we get back to you</p>
+                                <h4 class="mt-4">Meet Sam</h4>
+                                <p>Expert in fades, beard trims, and luxury grooming.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
 
-                        <!-- booking form fields ... same as original -->
+                <!-- SERVICES -->
+                <section id="services" class="p-5 bg-dark">
+                    <div class="container">
+                        <h2 class="mb-5">Our Services</h2>
 
-                        <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                            <button type="submit" class="form-control">Submit</button>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card bg-black text-white border-0 p-3">
+                                    <img src="images/services/woman-cutting-hair-man-salon.jpg" class="card-img-top rounded" />
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <h4>Hair Cut</h4>
+                                        <span>$36</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card bg-black text-white border-0 p-3">
+                                    <img src="images/services/hairdresser-grooming-their-client.jpg" class="card-img-top rounded" />
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <h4>Washing</h4>
+                                        <span>$25</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card bg-black text-white border-0 p-3">
+                                    <img src="images/services/hairdresser-grooming-client.jpg" class="card-img-top rounded" />
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <h4>Shaves</h4>
+                                        <span>$30</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card bg-black text-white border-0 p-3">
+                                    <img src="images/services/boy-getting-haircut-salon-front-view.jpg" class="card-img-top rounded" />
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <h4>Kids</h4>
+                                        <span>$25</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </section>
 
-                    </form>
-                </div>
+                <!-- PRICING -->
+                <section id="pricing" class="p-5">
+                    <div class="container">
+                        <h2 class="mb-4">Price List</h2>
+                        <div class="list-group bg-black p-4 rounded">
+                            <div class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Haircut</span><strong>$32</strong>
+                            </div>
+                            <div class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Beard Trim</span><strong>$26</strong>
+                            </div>
+                            <div class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Razor Cut</span><strong>$36</strong>
+                            </div>
+                            <div class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Shaves</span><strong>$30</strong>
+                            </div>
+                            <div class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Color / Styling</span><strong>$25</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            </div>
+                <!-- BOOKING -->
+                <section id="booking" class="p-5 bg-dark">
+                    <div class="container">
+                        <h2 class="mb-4">Book a Seat</h2>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <input class="form-control" placeholder="Full Name" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" placeholder="Phone" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="date" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="time" required />
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-danger w-100">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- CONTACT -->
+                <section id="contact" class="p-5">
+                    <div class="container">
+                        <h2 class="mb-4">Contact Us</h2>
+
+                        <p><strong>Phone:</strong> +49 120-240-3600</p>
+                        <p><strong>Email:</strong> hello@barber.beauty</p>
+
+                        <iframe class="mt-4" width="100%" height="300" style="border:0" loading="lazy"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7702.122299518348!2d13.396786616231472!3d52.531268574169616"></iframe>
+                    </div>
+                </section>
+
+            </main>
         </div>
-    </section>
+    </div>
 
-
-    <!-- PRICE LIST -->
-    <section class="price-list-section section-padding" id="section_4">
-        <div class="container">
-            <div class="row">
-                <!-- Same as your original file -->
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="section_5">
-        <!-- same as original contact section -->
-    </section>
-
-
-    <footer class="site-footer">
-        <!-- same footer section -->
-    </footer>
-
-
-    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
